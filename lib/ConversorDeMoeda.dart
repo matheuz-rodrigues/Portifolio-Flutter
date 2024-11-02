@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:portifolio/NavBar.dart';
 
-class TelaPortifolio extends StatelessWidget {
-  const TelaPortifolio({super.key});
+class ConversorDeMoedas extends StatelessWidget {
+  const ConversorDeMoedas({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
-      drawer: Navbar(),
+      drawer: const Navbar(),
       appBar: AppBar(
         toolbarHeight: 80,
         iconTheme: IconThemeData(color: Colors.white, size: 50),
@@ -18,7 +17,7 @@ class TelaPortifolio extends StatelessWidget {
         backgroundColor: Colors.blueGrey[900],
         centerTitle: true,
         title: const Text(
-          'Matheuz Rodriguez',
+          'Conversos de Moedas',
           style: TextStyle(
               fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white),
         ),
@@ -35,6 +34,7 @@ class TelaPortifolio extends StatelessWidget {
           ),
         ),
       ),
+      body: const Center(child: Text('Olá mundo'),),
     );
   }
 }

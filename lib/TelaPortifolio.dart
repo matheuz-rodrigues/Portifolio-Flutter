@@ -11,7 +11,7 @@ class TelaPortifolio extends StatelessWidget {
       drawer: Navbar(),
       appBar: AppBar(
         toolbarHeight: 80,
-        iconTheme: IconThemeData(color: Colors.white, size: 50),
+        iconTheme: IconThemeData(color: Colors.white, size: 45, ),
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
         ),
@@ -25,15 +25,21 @@ class TelaPortifolio extends StatelessWidget {
         leading: Builder(
           builder: (context) => Tooltip(
             message: 'Abrir Menu de Projetos',
-            child: IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {
 
+            child: IconButton(
+              padding: EdgeInsets.only(left: 20),
+              icon: Icon(Icons.menu_rounded),
+              onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
             ),
           ),
         ),
+      ),
+
+      body: Container(
+
+        child: Column(),
       ),
     );
   }

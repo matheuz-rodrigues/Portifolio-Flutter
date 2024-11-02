@@ -56,6 +56,12 @@ class Navbar extends StatelessWidget {
                     subtitle: const Text('Breve Descrição'),
                     onTap: () => null,
                   ),
+                  ListTile(
+                    leading: Icon(Icons.android),
+                    title: Text('Projeto 2'),
+                    subtitle: const Text('Breve Descrição'),
+                    onTap: () => null,
+                  ),
                 ],
               ),
             ),

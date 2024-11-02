@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'TelaPortifolio.dart';
+
 
 void main() {
   runApp(const MainApp());
@@ -11,6 +13,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
+      home: TelaPortifolio(),
 
 
     );

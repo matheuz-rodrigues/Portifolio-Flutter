@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-void abrirLink(String url) async {
+
+
+Future<void> abrirLink(String url) async {
   final Uri uri = Uri.parse(url);
-  if (await canLaunchUrl(uri)) {
-    await launchUrl(uri);
-  } else {
-    throw 'Não foi possível abrir o link: $url';
-  }
+  await launchUrl(uri);
 }
+
 
 class Whatsappbtn extends StatelessWidget {
   const Whatsappbtn({super.key});
@@ -16,13 +15,12 @@ class Whatsappbtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(),
+      margin: EdgeInsets.only(right: 10, bottom: 10),
+      height: 70,
+      width: 70,
       child: FloatingActionButton(
-
-        onPressed: () {
-          abrirLink('https://wa.me/5591999175479?text=Ol%C3%A1%20Matheus,%20venho%20do%20seu%20portif%C3%B3lio.');
-        },
-        backgroundColor: Colors.blueGrey[900],
+        onPressed: () => abrirLink('whatsapp://send?phone=5591999175479&text=Olá Matheus, eu vim pelo seu portifólio.'),
+      backgroundColor: Colors.blueGrey[900],
         elevation: 8.0,
         highlightElevation: 12.0,
         shape: RoundedRectangleBorder(
@@ -32,10 +30,10 @@ class Whatsappbtn extends StatelessWidget {
         materialTapTargetSize: MaterialTapTargetSize.padded,
         child: Image.asset(
           'imagens/logowhatsapp.png',
-          height: 45,
-          width: 45,
+          height: 60,
+          width: 60,
         ),
       ),
     );
   }
-  }
+}

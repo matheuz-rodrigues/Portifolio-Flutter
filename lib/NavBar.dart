@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portifolio/ConversorDeMoeda.dart';
+import 'package:portifolio/TelaPortifolio.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});
@@ -20,7 +21,7 @@ class Navbar extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              accountName: const Text('Matheuz Rodriguez'),
+              accountName: const Text('Matheus Rodrigues'),
               accountEmail: const Text('matheusrodriguesfilho.91@gmail.com'),
               currentAccountPicture: CircleAvatar(
                 child: ClipOval(
@@ -40,15 +41,20 @@ class Navbar extends StatelessWidget {
                     onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ConversorDeMoedas(),
+                        builder: (context) => TelaPortifolio(),
                       ),
                     ),
                   ),
                   ListTile(
                     leading: Icon(Icons.notifications),
-                    title: Text('Projeto 1'),
-                    subtitle: const Text('Breve Descrição'),
-                    onTap: () => null,
+                    title: Text('Conversor de Moedas'),
+                    //subtitle: const Text(''),
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ConversorDeMoedas(),
+                      ),
+                    ),
                   ),
                   ListTile(
                     leading: Icon(Icons.android),
